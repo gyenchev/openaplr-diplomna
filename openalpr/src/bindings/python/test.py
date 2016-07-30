@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 
 parser = ArgumentParser(description='OpenALPR Python Test Program')
 
-parser.add_argument("-c", "--country", dest="country", action="store", default="us",
+parser.add_argument("-c", "--country", dest="country", action="store", default="eu",
                   help="License plate Country" )
 
 parser.add_argument("--config", dest="config", action="store", default="/etc/openalpr/openalpr.conf",
