@@ -17,7 +17,7 @@ RUN cd /storage/projects/alpr/src && \
 
 RUN cd /storage/projects/alpr/src/bindings/python && \
       python setup.py install && \
-      ./make.sh
+      bash ./make.sh
 
 ENTRYPOINT ["python"]
 
