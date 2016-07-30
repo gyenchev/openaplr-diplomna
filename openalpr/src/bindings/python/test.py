@@ -26,7 +26,7 @@ try:
         print("Using OpenALPR " + alpr.get_version())
 
         alpr.set_top_n(7)
-        alpr.set_default_region("wa")
+        #alpr.set_default_region("wa")
         alpr.set_detect_region(False)
         jpeg_bytes = open(options.plate_image, "rb").read()
         results = alpr.recognize_array(jpeg_bytes)
