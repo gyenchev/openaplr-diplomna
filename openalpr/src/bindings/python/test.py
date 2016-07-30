@@ -32,12 +32,12 @@ try:
         results = alpr.recognize_array(jpeg_bytes)
 
         # Uncomment to see the full results structure
-        # import pprint
-        # pprint.pprint(results)
+         import pprint
+         pprint.pprint(results)
 
         print("Image size: %dx%d" %(results['img_width'], results['img_height']))
         print("Processing Time: %f" % results['processing_time_ms'])
-
+        #print("Guesses: %d" % len(results));
         i = 0
         for plate in results['results']:
             i += 1
