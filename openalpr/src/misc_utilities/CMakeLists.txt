@@ -18,9 +18,9 @@ TARGET_LINK_LIBRARIES(openalpr-utils-classifychars
   
 if (NOT DEFINED WIN32)
 ADD_EXECUTABLE(openalpr-utils-benchmark
-		benchmarks/benchmark.cpp 
-		benchmarks/benchmark_utils.cpp 
-		benchmarks/endtoendtest.cpp 
+		benchmarks2/benchmark.cpp 
+		benchmarks2/benchmark_utils.cpp 
+		benchmarks2/endtoendtest.cpp 
 )
 TARGET_LINK_LIBRARIES(openalpr-utils-benchmark
     ${OPENALPR_LIB}
