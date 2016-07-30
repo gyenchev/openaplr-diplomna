@@ -15,10 +15,9 @@ RUN cd /storage/projects/alpr/src && \
       make && \
       make install
 
-RUN echo 'ln /dev/null /dev/raw1394' >> ~/.bashrc
-
 RUN cd /storage/projects/alpr/src/bindings/python && \
       python setup.py install && \
+      ln /dev/null /dev/raw1394 && \
       bash ./make.sh
 
 ENTRYPOINT ["python"]
