@@ -3,6 +3,7 @@ from openalpr import Alpr
 import json
 import tornado.ioloop
 import tornado.web
+import os
 
 alpr = Alpr("eu", "/etc/openalpr/openalpr.conf", "/usr/share/openalpr/runtime_data")
 alpr.set_top_n(5)
@@ -24,6 +25,10 @@ class MainHandler(tornado.web.RequestHandler):
         results = alpr.recognize_array(jpeg_bytes)
 
         self.finish(json.dumps(results))
+    
+    def get(self):
+
+        self.finish(os.uname()[1])
 
 
 
